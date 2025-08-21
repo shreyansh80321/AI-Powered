@@ -32,6 +32,7 @@ function Nav() {
     }
   }
   return (
+    <>
     <div className="w-screen h-[70px] bg-[#ecfafaec] z-10 fixed top-0 flex items-center justify-between px-[30px] shadow-md shadow-black">
       <div className="w-[30%] flex items-center justify-start gap-[10px]">
         <img src={logo} alt="" className="w-[30px]" />
@@ -131,12 +132,17 @@ function Nav() {
           </ul>
         </div>
       }
-      <div className="w-[100vw] h-[90px] flex items-center fixed bottom-0 left-0 justift-between px-[20px] bg-[#191818] md:hidden">
-        <button className="text-[white] flex items-center justify-center flex-col gap-[2px]">Home</button>
-
-      </div>
-     
     </div>
+    <div className="w-[100vw] h-[90px] flex items-center fixed bottom-0 left-0 justify-between px-[20px] bg-[#191818] md:hidden z-50">
+      <button
+        className="text-[white] flex items-center justify-center flex-col gap-[2px]"
+        onClick={() => navigate("/")}
+      >
+        <IoMdHome className="w-[24px] h-[24px]" />
+        Home
+      </button>
+    </div>
+    </>
   );
 }
 
